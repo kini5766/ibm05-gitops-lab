@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bgd_re
+  namespace: bgd_re
+  labels:
+    app: bgd_re
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bgd_re
+  template:
+    metadata:
+      labels:
+        app: bgd_re
+      creationTimestamp: null
+    spec:
+      containers:
+        - name: bgd_re
+          image: quay.io/rhdevelopers/bgd:1.0.0
+          env:
+            - name: COLOR
+              value: "blue"
