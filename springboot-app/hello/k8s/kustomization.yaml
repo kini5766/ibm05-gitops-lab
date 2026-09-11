@@ -10,4 +10,4 @@ resources:
 images:
 - name: kini5766/hello-app
   newName: kini5766/hello-app
-  newTag: e97f99a
+  newTag: 4f1e9e8
